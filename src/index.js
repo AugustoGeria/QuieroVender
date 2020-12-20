@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LinkButton from './components/LinkButton';
+import HomePage from './pages/HomePage';
 import './index.css';
-import './components/LinkButton/index'
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <LinkButton text = 'hola' onClick = {()=> console.log('redirect to hola ')}>
-    </LinkButton>
-    <LinkButton text = 'carrito'>
-    </LinkButton>
-    <LinkButton text = 'otro'>
-    </LinkButton>
-  </React.StrictMode>,
+  <HomePage>
+  </HomePage>,
   document.getElementById('root')
 );
 

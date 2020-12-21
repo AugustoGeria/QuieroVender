@@ -12,7 +12,7 @@ function HomePage (props) {
             <LinkButton text = 'otro'>
             </LinkButton>
         <div>
-            <img src = '' alt= 'banner'></img>
+            <img src = 'https://placehold.co/1400x400' alt= 'banner'></img>
         </div>
        <div>
            <CategoryList></CategoryList>

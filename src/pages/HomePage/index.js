@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoryList from '../../components/CategoryList';
+import CategoryListContainer from '../../components/CategoryListContainer/index';
 import LinkButton from '../../components/LinkButton';
 
 function HomePage (props) {
@@ -15,7 +15,7 @@ function HomePage (props) {
             <img src = 'https://placehold.co/1400x400' alt= 'banner'></img>
         </div>
        <div>
-           <CategoryList></CategoryList>
+           <CategoryListContainer></CategoryListContainer>
        </div>
        
        

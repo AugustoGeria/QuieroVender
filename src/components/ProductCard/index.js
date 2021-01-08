@@ -1,27 +1,17 @@
 import React, { Fragment } from 'react';
 
 function ProductCard(props) {
-   if(!(props.extended))
-   { return (
+   
+    return (
         
            <Fragment>
             <img src = {props.img} alt ={props.name}></img>
-            <h1>{props.price}</h1>
+            <h1>{props.listPrice}</h1>
             <p>{props.description}</p>    
+            {props.extended && <button>Ver Oferta</button>}
             </Fragment>
-    )}
-   else{
-    return (
-        
-        <Fragment>
-         <img src = {props.img}alt = {props.name}></img>
-         <h1>{props.price}</h1>
-         <p>{props.description}</p>    
-         <h1>EXTENDIDO</h1>
-         </Fragment>
     )
-
-   }
+   
 }
 
 export default ProductCard;

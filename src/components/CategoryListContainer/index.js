@@ -13,6 +13,7 @@ function CategoryListContainer() {
         <>
             { Object.entries(categoryList).map(([categoryTitle,productsId]) => {   
                 const featureProductId = productsId[0];      
+                console.log(featureProductId)
                 return (
                         <ProductListContainer key={categoryTitle} categoryTitle = {categoryTitle} productsId = {productsId} featureProductId = {featureProductId}></ProductListContainer>
                 );

@@ -9,7 +9,7 @@ function ProductListContainer(props) {
           listPrice: 150.00,
           discountedPrice : 130.00,
           colors: 'Rojo , Negro , Gris',
-          expirationDate:'05 October 2011 14:48 UTC',
+          expirationDate:new Date('05 October 2011 14:48 UTC'),
           description : 'aqui va una descripcion',
           groupCapacity : 10,
           suscriptorsNumber : 5
@@ -20,7 +20,7 @@ function ProductListContainer(props) {
             listPrice: 150.00,
             discountedPrice : 130.00,
             colors: 'Rojo , Negro , Gris',
-            expirationDate:'05 October 2011 14:48 UTC',
+            expirationDate:new Date('05 October 2011 14:48 UTC'),
             description : 'aqui va una descripcion',
             groupCapacity : 10,
             suscriptorsNumber : 8
@@ -44,9 +44,9 @@ function ProductListContainer(props) {
                     groupCapacity,
                     suscriptorsNumber
                     }) => {
-                     const  discountedPercentage = Math.round(((listPrice /discountedPrice)*100) - 100)
+                    const  discountedPercentage = Math.round(((listPrice /discountedPrice)*100) - 100)
                     const  occupancyPercentage = (suscriptorsNumber/groupCapacity)*100
-                    //expirationDate = expirationDate.toISOString();
+                    expirationDate = expirationDate.toISOString();
                     return (
                         <ProductCard
                         key={id}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LinkButton (props) {
+function NavbarLink(props) {
 
     
     return (
@@ -10,4 +10,4 @@ function LinkButton (props) {
     );
 }
 
-export default LinkButton ;
+export default NavbarLink ;

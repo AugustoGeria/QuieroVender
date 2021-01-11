@@ -27,6 +27,7 @@ function ProductListContainer(props) {
           }
       ]
 
+
     return (
         <div>
             <h1>{props.categoryTitle}</h1>
@@ -43,9 +44,9 @@ function ProductListContainer(props) {
                     groupCapacity,
                     suscriptorsNumber
                     }) => {
-                     const  discountedPercentage = (listPrice /discountedPrice)*100
+                     const  discountedPercentage = Math.round(((listPrice /discountedPrice)*100) - 100)
                     const  occupancyPercentage = (suscriptorsNumber/groupCapacity)*100
-                   // expirationDate = expirationDate.toISOString();
+                    //expirationDate = expirationDate.toISOString();
                     return (
                         <ProductCard
                         key={id}

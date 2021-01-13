@@ -11,11 +11,10 @@ function CategoryListContainer() {
    
     return(
         <>
-            { Object.entries(categoryList).map(([categoryTitle,productsId]) => {   
-                const featureProductId = productsId[0];      
-                console.log(featureProductId)
+            { Object.entries(categoryList).map(([categoryTitle,productsIds]) => {   
+                const featureProductId = productsIds[0];      
                 return (
-                        <ProductListContainer key={categoryTitle} categoryTitle = {categoryTitle} productsId = {productsId} featureProductId = {featureProductId}></ProductListContainer>
+                        <ProductListContainer key={categoryTitle} categoryTitle = {categoryTitle} productsIds = {productsIds} featureProductId = {featureProductId}></ProductListContainer>
                 );
             })
             }
@@ -23,4 +22,4 @@ function CategoryListContainer() {
     )
 }
 
-export default CategoryListContainer;
+export default CategoryListContainer

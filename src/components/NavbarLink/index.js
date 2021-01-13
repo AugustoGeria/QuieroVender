@@ -1,13 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function NavbarLink(props) {
-
-    
-    return (
-            <button onClick = {props.onClick}>
-                {props.text}
-            </button>
-    );
+  return <a href="#">{props.text}</a>;
 }
 
-export default NavbarLink ;
+export default NavbarLink;

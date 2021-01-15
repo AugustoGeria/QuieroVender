@@ -6,24 +6,28 @@ function ProductListContainer(props) {
     {
       id: 1,
       title: "Drone",
-      listPrice: 150.0,
-      discountedPrice: 130.0,
+      listPrice: 'U$$ 150.0',
+      discountedPrice: 'U$$ 130.0',
       colors: "Rojo , Negro , Gris",
       expirationDate: new Date("05 October 2011 14:48 UTC").toISOString(),
       description: "aqui va una descripcion",
-      groupCapacity: 10,
-      suscriptorsNumber: 5,
+      groupCapacity: '10',
+      suscriptorsNumber: '5',
+      discountedPercentage: '15%',
+      occupancyPercentage : '50%'
     },
     {
       id: 2,
       title: "TV",
-      listPrice: 150.0,
-      discountedPrice: 130.0,
+      listPrice: 'U$$ 150.0',
+      discountedPrice: 'U$$ 130.0',
       colors: "Rojo , Negro , Gris",
       expirationDate: new Date("05 October 2011 14:48 UTC").toISOString(),
       description: "aqui va una descripcion",
-      groupCapacity: 10,
-      suscriptorsNumber: 8,
+      groupCapacity: '10',
+      suscriptorsNumber: '8',
+      discountedPercentage: '15%',
+      occupancyPercentage : '80%'
     },
   ];
 
@@ -42,19 +46,17 @@ function ProductListContainer(props) {
             description,
             groupCapacity,
             suscriptorsNumber,
+            discountedPercentage,
+            occupancyPercentage
           }) => {
-            const discountedPercentage = Math.round(
-              (listPrice / discountedPrice) * 100 - 100
-            );
-            const occupancyPercentage =
-              (suscriptorsNumber / groupCapacity) * 100;
+    
             return (
               <ProductCard
                 key={id}
                 title={title}
-                listPrice={`U$$ ${listPrice}`}
-                discountedPrice={`U$$ ${discountedPrice}`}
-                discountedPercentage={`${discountedPercentage}%`}
+                listPrice={listPrice}
+                discountedPrice={discountedPrice}
+                discountedPercentage={discountedPercentage}
                 expirationDate={expirationDate}
                 productPhotoURL="https://placehold.co/600x400"
                 colors={colors}
@@ -72,4 +74,5 @@ function ProductListContainer(props) {
   );
 }
 
-export default ProductListContainer;
+export default ProductListContainer
+

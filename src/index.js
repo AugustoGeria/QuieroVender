@@ -5,8 +5,7 @@ import './index.css';
 
 
 ReactDOM.render(
-  <HomePage>
-  </HomePage>,
+  <HomePage />,
   document.getElementById('root')
 );
 

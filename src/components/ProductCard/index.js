@@ -1,6 +1,6 @@
 import React from "react";
 import GroupOccupancy from "../GroupOccupancy";
-import Timer from "../Timer";
+import CountdownTimerContainer from "../CountdownTimerContainer";
 
 function ProductCard(props) {
   return (
@@ -16,7 +16,7 @@ function ProductCard(props) {
         suscriptorsNumber={props.suscriptorsNumber}
         occupancyPercentage={props.occupancyPercentage}
       ></GroupOccupancy>
-      <Timer expirationDate={props.expirationDate}></Timer>
+      <CountdownTimerContainer expirationDate={props.expirationDate}></CountdownTimerContainer>
       {props.extended && <button>Ver Oferta</button>}
     </>
   );

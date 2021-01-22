@@ -1,7 +1,12 @@
-import React from "react";
+import React from "react"
+import PropTypes from 'prop-types'
 
-function NavbarLink(props) {
-  return <a href="#">{props.text}</a>;
+function NavbarLink({text}) {
+  return <a href="#">{text}</a>;
 }
 
-export default NavbarLink;
+NavbarLink.prototype = {
+  text: PropTypes.string,
+}
+export default NavbarLink
+

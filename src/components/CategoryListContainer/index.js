@@ -1,25 +1,30 @@
-import React from 'react';
-import ProductListContainer from '../ProductListContainer';
+import React from "react"
+
+import ProductListContainer from "../ProductListContainer"
+import useCategoryList from "../../hooks/useCategoryList"
 
 function CategoryListContainer() {
-    
-    const categoryList = {
-        tech: [1,2,3,4],
-        food: [5,6,7,8]
-      }
-      
-   
-    return(
-        <>
-            { Object.entries(categoryList).map(([categoryTitle,productsIds]) => {   
-                const featureProductId = productsIds[0];      
-                return (
-                        <ProductListContainer key={categoryTitle} categoryTitle = {categoryTitle} productsIds = {productsIds} featureProductId = {featureProductId}></ProductListContainer>
-                );
-            })
-            }
-        </>
-    )
+  const categoryList = useCategoryList()
+
+  return (
+    <>
+      {Object.entries(categoryList).map(([categoryTitle, productsIds]) => {
+        const featureProductId = productsIds[0]
+
+        return (
+          <div>
+            <h1>{categoryTitle}</h1>
+            <ProductListContainer
+              key={categoryTitle}
+              productsIds={productsIds}
+              featureProductId={featureProductId}
+              />
+          </div>
+        );
+      })}
+    </>
+  );
 }
 
 export default CategoryListContainer
+

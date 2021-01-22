@@ -1,25 +1,44 @@
-import React from "react";
-import GroupOccupancy from "../GroupOccupancy";
-import CountdownTimerContainer from "../CountdownTimerContainer";
+import React from "react"
+import PropTypes from 'prop-types'
 
-function ProductCard(props) {
+import GroupOccupancy from "../GroupOccupancy"
+import CountdownTimerContainer from "../CountdownTimerContainer"
+
+function ProductCard({title, listPrice, discountedPrice, discountedPercentage, expirationDate, productPhotoURL, colors, description, groupCapacity, suscriptorsNumber, occupancyPercentage, extended}) {
   return (
     <>
-      <img src={props.productPhotoURL} alt={props.title}></img>
-      <h1> {props.listPrice}</h1>
-      <h1> {props.discountedPrice}</h1>
-      <h2>{props.discountedPercentage}</h2>
-      <p>{props.description}</p>
-      <p>{props.colors}</p>
+      <img src={productPhotoURL} alt={title}></img>
+      <h1> {listPrice}</h1>
+      <h1> {discountedPrice}</h1>
+      <h2>{discountedPercentage}</h2>
+      <p>{description}</p>
+      <p>{colors}</p>
       <GroupOccupancy
-        groupCapacity={props.groupCapacity}
-        suscriptorsNumber={props.suscriptorsNumber}
-        occupancyPercentage={props.occupancyPercentage}
-      ></GroupOccupancy>
-      <CountdownTimerContainer expirationDate={props.expirationDate}></CountdownTimerContainer>
-      {props.extended && <button>Ver Oferta</button>}
+        groupCapacity={groupCapacity}
+        suscriptorsNumber={suscriptorsNumber}
+        occupancyPercentage={occupancyPercentage}
+        />
+      <CountdownTimerContainer
+        expirationDate={expirationDate}
+        />
+      {extended && <button>Ver Oferta</button>}
     </>
   );
+}
+
+ProductCard.propTypes = {
+  title: PropTypes.string,
+  listPrice: PropTypes.string,
+  discountedPrice: PropTypes.string,
+  discountedPercentage: PropTypes.string,
+  expirationDate: PropTypes.string,
+  productPhotoURL: PropTypes.string,
+  colors: PropTypes.string,
+  description: PropTypes.string,
+  groupCapacity: PropTypes.string,
+  suscriptorsNumber: PropTypes.string,
+  occupancyPercentage: PropTypes.string,
+  extended: PropTypes.bool,
 }
 
 export default ProductCard

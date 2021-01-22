@@ -1,13 +1,22 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-function GroupOccupancy(props) {
+
+function GroupOccupancy({occupancyPercentage, suscriptorsNumber, groupCapacity }) {
     
     return (
         <>
-          <p>{props.occupancyPercentage}</p>  
-          <p>{props.suscriptorsNumber} / {props.groupCapacity} Agrupados </p>
+          <p>{occupancyPercentage}</p>  
+          <p>{suscriptorsNumber} / {groupCapacity} Agrupados </p>
         </>
     );
 }
 
-export default GroupOccupancy;
+GroupOccupancy.propTypes = {
+  occupancyPercentage: PropTypes.string,
+  suscriptorsNumber: PropTypes.string,
+  groupCapacity: PropTypes.string,
+}
+
+export default GroupOccupancy
+

@@ -1,38 +1,40 @@
-import React, { useState, useEffect } from "react";
-import CountdownTimer from "../CountdownTimer";
-import dayjs from 'dayjs'
+import React, { useState, useEffect, useCallback } from "react";
+import dayjs from "dayjs"
+import PropTypes from 'prop-types'
 
-function CountdownTimerContainer(props) {
+import CountdownTimer from "../CountdownTimer"
+
+
+function CountdownTimerContainer({expirationDate}) {
   const [timeLeft, setTimeLeft] = useState();
+  const duration = require('dayjs/plugin/duration')
+  dayjs.extend(duration)  
+
+  const diffTimer = useCallback((expirationDate) => {
+    const now = dayjs()
+    expirationDate = dayjs(expirationDate)
+    const difference = expirationDate.diff(now)
+    const endPromTime = dayjs.duration({
+      hours: expirationDate.diff(now, 'hours'),
+      minutes: dayjs(difference).minute(),
+      seconds: dayjs(difference).second()
+    }).format('HH:mm:ss')
+    
+    return endPromTime <=0 ? 'Expired' : endPromTime
+  }, []);
 
   useEffect(() => {
-    const callback = () => setTimeLeft(diffTimer);
+    const callback = () => setTimeLeft(diffTimer(expirationDate));
     const intervalID = setInterval(callback, 1000);
 
-    return(
-       () => clearInterval(intervalID)
-    )
-  },[props.expirationDate]);
-  
-  const diffTimer = () => {
-      const now = dayjs()
-      const expirationDate = dayjs(props.expirationDate)
-      return secondsToString(expirationDate.diff(now,'second',true))
-  }
-  
-  function secondsToString(seconds) {
-    var hour = Math.floor(seconds / 3600);
-    hour = (hour < 10)? '0' + hour : hour;
-    var minute = Math.floor((seconds / 60) % 60);
-    minute = (minute < 10)? '0' + minute : minute;
-    var second =  Math.floor(seconds % 60);
-    second = (second < 10)? '0' + second : second;
-    return hour + ':' + minute + ':' + second;
-  }
+    return () => clearInterval(intervalID);
+  }, [expirationDate, diffTimer]);
 
-  return (  
-      <CountdownTimer timeLeft={timeLeft} />
-  );
+  return <CountdownTimer timeLeft={timeLeft} />;
 }
 
-export default CountdownTimerContainer
+CountdownTimerContainer.propTypes = {
+  expirationDate: PropTypes.string
+}
+
+export default CountdownTimerContainer;

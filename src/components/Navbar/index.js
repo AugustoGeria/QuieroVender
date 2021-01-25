@@ -1,16 +1,15 @@
-import React from "react"
+import React from 'react'
 
-import NavbarLink from "../NavbarLink"
+import NavbarLink from '../NavbarLink'
 
-function Navbar() {
+function Navbar () {
   return (
     <div>
-      <NavbarLink text="hola"/>
-      <NavbarLink text="carrito"/>
-      <NavbarLink text="otro"/>
+      <NavbarLink text='hola' />
+      <NavbarLink text='carrito' />
+      <NavbarLink text='otro' />
     </div>
-  );
+  )
 }
 
 export default Navbar
-

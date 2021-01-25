@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 import PropTypes from 'prop-types'
 
-import ProductCard from "./../ProductCard/index"
-import useProductList from "../../hooks/useProductList"
+import ProductCard from './../ProductCard/index'
+import useProductList from '../../hooks/useProductList'
 
-function ProductListContainer({productsIds,featureProductId}) {
+function ProductListContainer ({ productsIds, featureProductId }) {
   const productList = useProductList()
   return (
     <div>
@@ -21,7 +21,7 @@ function ProductListContainer({productsIds,featureProductId}) {
           suscriptorsNumber,
           discountedPercentage,
           occupancyPercentage,
-          productPhotoURL,
+          productPhotoURL
         }) => {
           return (
             <ProductCard
@@ -39,16 +39,16 @@ function ProductListContainer({productsIds,featureProductId}) {
               occupancyPercentage={occupancyPercentage}
               extended={id === featureProductId}
             />
-          );
+          )
         }
       )}
     </div>
-  );
+  )
 }
 
 ProductListContainer.propTypes = {
   productsIds: PropTypes.array,
-  featureProductId: PropTypes.string,
+  featureProductId: PropTypes.string
 }
 
 export default ProductListContainer

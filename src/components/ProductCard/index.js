@@ -1,13 +1,26 @@
-import React from "react"
+import React from 'react'
 import PropTypes from 'prop-types'
 
-import GroupOccupancy from "../GroupOccupancy"
-import CountdownTimerContainer from "../CountdownTimerContainer"
+import GroupOccupancy from '../GroupOccupancy'
+import CountdownTimerContainer from '../CountdownTimerContainer'
 
-function ProductCard({title, listPrice, discountedPrice, discountedPercentage, expirationDate, productPhotoURL, colors, description, groupCapacity, suscriptorsNumber, occupancyPercentage, extended}) {
+function ProductCard ({
+  title,
+  listPrice,
+  discountedPrice,
+  discountedPercentage,
+  expirationDate,
+  productPhotoURL,
+  colors,
+  description,
+  groupCapacity,
+  suscriptorsNumber,
+  occupancyPercentage,
+  extended
+}) {
   return (
     <>
-      <img src={productPhotoURL} alt={title}></img>
+      <img src={productPhotoURL} alt={title} />
       <h1> {listPrice}</h1>
       <h1> {discountedPrice}</h1>
       <h2>{discountedPercentage}</h2>
@@ -17,13 +30,11 @@ function ProductCard({title, listPrice, discountedPrice, discountedPercentage, e
         groupCapacity={groupCapacity}
         suscriptorsNumber={suscriptorsNumber}
         occupancyPercentage={occupancyPercentage}
-        />
-      <CountdownTimerContainer
-        expirationDate={expirationDate}
-        />
+      />
+      <CountdownTimerContainer expirationDate={expirationDate} />
       {extended && <button>Ver Oferta</button>}
     </>
-  );
+  )
 }
 
 ProductCard.propTypes = {
@@ -38,8 +49,7 @@ ProductCard.propTypes = {
   groupCapacity: PropTypes.string,
   suscriptorsNumber: PropTypes.string,
   occupancyPercentage: PropTypes.string,
-  extended: PropTypes.bool,
+  extended: PropTypes.bool
 }
 
 export default ProductCard
-

@@ -1,40 +1,42 @@
-import React, { useState, useEffect, useCallback } from "react";
-import dayjs from "dayjs"
+import React, { useState, useEffect, useCallback } from 'react'
+import dayjs from 'dayjs'
 import PropTypes from 'prop-types'
 
-import CountdownTimer from "../CountdownTimer"
+import CountdownTimer from '../CountdownTimer'
+import duration from 'dayjs/plugin/duration'
 
-
-function CountdownTimerContainer({expirationDate}) {
-  const [timeLeft, setTimeLeft] = useState();
-  const duration = require('dayjs/plugin/duration')
+function CountdownTimerContainer ({ expirationDate }) {
+  const [timeLeft, setTimeLeft] = useState()
   dayjs.extend(duration)  
 
-  const diffTimer = useCallback((expirationDate) => {
+  const calculateTimeLeft = useCallback((expirationDate) => {
     const now = dayjs()
     expirationDate = dayjs(expirationDate)
     const difference = expirationDate.diff(now)
-    const endPromTime = dayjs.duration({
+
+    if (difference <= 0) return 'Expired'
+
+    const timeDifference = dayjs.duration({
       hours: expirationDate.diff(now, 'hours'),
       minutes: dayjs(difference).minute(),
       seconds: dayjs(difference).second()
     }).format('HH:mm:ss')
-    
-    return endPromTime <=0 ? 'Expired' : endPromTime
-  }, []);
+
+    return timeDifference
+  }, [])
 
   useEffect(() => {
-    const callback = () => setTimeLeft(diffTimer(expirationDate));
-    const intervalID = setInterval(callback, 1000);
+    const callback = () => setTimeLeft(calculateTimeLeft(expirationDate))
+    const intervalID = setInterval(callback, 1000)
 
-    return () => clearInterval(intervalID);
-  }, [expirationDate, diffTimer]);
+    return () => clearInterval(intervalID)
+  }, [expirationDate, calculateTimeLeft])
 
-  return <CountdownTimer timeLeft={timeLeft} />;
+  return <CountdownTimer timeLeft={timeLeft} />
 }
 
 CountdownTimerContainer.propTypes = {
   expirationDate: PropTypes.string
 }
 
-export default CountdownTimerContainer;
+export default CountdownTimerContainer

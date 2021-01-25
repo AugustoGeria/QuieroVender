@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import ProductListContainer from "../ProductListContainer"
-import useCategoryList from "../../hooks/useCategoryList"
+import ProductListContainer from '../ProductListContainer'
+import useCategoryList from '../../hooks/useCategoryList'
 
-function CategoryListContainer() {
+function CategoryListContainer () {
   const categoryList = useCategoryList()
 
   return (
@@ -18,13 +18,12 @@ function CategoryListContainer() {
               key={categoryTitle}
               productsIds={productsIds}
               featureProductId={featureProductId}
-              />
+            />
           </div>
-        );
+        )
       })}
     </>
-  );
+  )
 }
 
 export default CategoryListContainer
-

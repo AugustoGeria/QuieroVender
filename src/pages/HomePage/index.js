@@ -1,14 +1,14 @@
-import React from "react"
+import React from 'react'
 
-import CategoryListContainer from "../../components/CategoryListContainer/index"
-import Navbar from "../../components/Navbar"
+import CategoryListContainer from '../../components/CategoryListContainer/index'
+import Navbar from '../../components/Navbar'
 
-function HomePage() {
+function HomePage () {
   return (
     <>
-      <Navbar/>
-      <img src="https://placehold.co/1400x400" alt="banner"/>
-      <CategoryListContainer/>
+      <Navbar />
+      <img src='https://placehold.co/1400x400' alt='banner' />
+      <CategoryListContainer />
     </>
   )
 }

@@ -8,7 +8,7 @@ import duration from 'dayjs/plugin/duration'
 function CountdownTimerContainer ({ expirationDate }) {
   const [timeLeft, setTimeLeft] = useState()
   dayjs.extend(duration)  
-
+  
   const calculateTimeLeft = useCallback((expirationDate) => {
     const now = dayjs()
     expirationDate = dayjs(expirationDate)

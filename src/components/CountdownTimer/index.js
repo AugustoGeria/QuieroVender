@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function CountdownTimer ({ timeLeft }) {
-  return <div>{timeLeft}</div>
+import classes from './index.module.scss'
+
+function CountdownTimer ({ timeLeft,extended }) {
+  return <div className={extended? classes.timerViewExtended : classes.timerView}>{timeLeft}</div>
 }
 
 CountdownTimer.prototype = {

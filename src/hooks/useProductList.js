@@ -9,7 +9,7 @@ const useProductList = () => [
     description: 'aquí va una descripción',
     groupCapacity: '10',
     suscriptorsNumber: '5',
-    discountedPercentage: '15%',
+    discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '50%',
     productPhotoURL: 'https://placehold.co/600x400'
   },
@@ -23,7 +23,7 @@ const useProductList = () => [
     description: 'aquí va una descripción',
     groupCapacity: '10',
     suscriptorsNumber: '8',
-    discountedPercentage: '15%',
+    discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '80%',
     productPhotoURL: 'https://placehold.co/600x400'
   },
@@ -37,7 +37,7 @@ const useProductList = () => [
     description: 'aquí va una descripción',
     groupCapacity: '10',
     suscriptorsNumber: '5',
-    discountedPercentage: '15%',
+    discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '50%',
     productPhotoURL: 'https://placehold.co/600x400'
   }

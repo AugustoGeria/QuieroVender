@@ -21,14 +21,17 @@ function ProductCard({
   extended
 }) {
   return (
-    <div className={extended ? classes.cardExtended :classes.card}>
-      <img src={productPhotoURL} alt={title} className={classes.imgCard} />
+    <div className={extended ? classes.cardExtended : classes.card}>
+      <div className={classes.imgContainer}>
+      <CountdownTimerContainer extended={extended}  expirationDate={expirationDate} />
+        <img src={productPhotoURL} alt={title} className={classes.imgCard} />
+        <h2 className={extended ? classes.discountExtended :classes.discount}>{discountedPercentage}</h2>
+      </div>
       <div>
         <div className={classes.prices}>
           <h2> {listPrice}</h2>
           <h1> {discountedPrice}</h1>
         </div>
-        <h2 className={classes.discount}>{discountedPercentage}</h2>
         <p>{description}</p>
         <p>{colors}</p>
         <GroupOccupancy
@@ -36,7 +39,6 @@ function ProductCard({
           suscriptorsNumber={suscriptorsNumber}
           occupancyPercentage={occupancyPercentage}
         />
-        <CountdownTimerContainer expirationDate={expirationDate} />
         {extended && <button>Ver Oferta</button>}
       </div>
     </div>

@@ -1,0 +1,37 @@
+.percentage{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FF4F17;
+}
+
+.percentageContainer{
+    display: flex;
+}
+
+.participantsNumber{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #7F7F9C;
+    margin-left: 8px;
+}
+
+.figuresContainer{
+    display: flex;
+    flex-grow: 1;
+
+    & > img{
+        width: 10px;
+        margin-right: 9px;
+        height: 20px;  
+    }
+    
+    & > * + * {
+                 margin-right: 8px;
+     } 
+}
+
+.occupancyInfo{
+    display: flex;
+}

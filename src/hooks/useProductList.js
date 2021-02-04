@@ -1,3 +1,7 @@
+import muffin from "../images/muffin.svg"
+import strawberries from "../images/strawberries.svg"
+import cookies from "../images/cookies.svg"
+
 const useProductList = () => [
   {
     id: '1',
@@ -11,7 +15,7 @@ const useProductList = () => [
     suscriptorsNumber: '5',
     discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '50%',
-    productPhotoURL: 'https://placehold.co/600x400'
+    productPhotoURL: strawberries
   },
   {
     id: '5',
@@ -25,7 +29,7 @@ const useProductList = () => [
     suscriptorsNumber: '8',
     discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '80%',
-    productPhotoURL: 'https://placehold.co/600x400'
+    productPhotoURL: muffin
   },
   {
     id: '2',
@@ -39,7 +43,7 @@ const useProductList = () => [
     suscriptorsNumber: '5',
     discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '50%',
-    productPhotoURL: 'https://placehold.co/600x400'
+    productPhotoURL: cookies
   }
   
 ]

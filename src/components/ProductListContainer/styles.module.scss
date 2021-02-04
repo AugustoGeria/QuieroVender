@@ -1,4 +1,12 @@
 .cardContainer{ 
     display: flex;
     margin-bottom: 100px;
+    margin-left: 75px;
 }
+@media all and (max-width: 600px){
+    .cardContainer{
+        display: flex;
+        margin-bottom: 100px;
+        margin-left: 12px;
+    }
+ }

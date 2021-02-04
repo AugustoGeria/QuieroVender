@@ -1,6 +1,7 @@
 .imgCard{
     width: 100%;
     height: 210px;
+    object-fit: cover;
 }
 
 .prices{
@@ -10,13 +11,41 @@
         text-decoration: line-through;
     }
 }
+.regularPrice{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #A0ACAF;
+    text-decoration: line-through;
+}
 
+.specialPrice{
+    margin-left: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    color: #1A2224;
+}
+.productDescription{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #1A2224;
+    margin: 10px 10px 10px 0;
+}
+.colorOptions{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #A0ACAF;
+}
 .card{
     width: 308px;
     height: 430px;
     border-radius: 6px;
-    margin: 20px;
-    padding: 20px;
+    border: 1px solid #F1F3F3;
+    background-color:  #FFFFFF;
+    margin-left: 30px;
 }
 
 .card:hover{
@@ -27,8 +56,7 @@
     width: 635px;
     height: 430px;
     border-radius: 6px;
-    margin: 20px;
-    padding: 20px;
+    background-color:  #FFFFFF;
 }
 
 .cardExtended:hover{
@@ -41,10 +69,10 @@
     height: 59px;
     align-items: center;
     position: absolute;
-    top: 70%;
-    left:180px;
+    top: 75%;
+    left:65%;
     text-align: center;
-    padding: 10px;
+    border-radius: 8px;
 }
 .discountExtended{
     background-color: #FDCA40;
@@ -52,13 +80,45 @@
     height: 59px;
     align-items: center;
     position: absolute;
-    top: 70%;
-    left: 450px;
+    bottom: 70%;
+    right: 75%;
     text-align: center;
-    padding: 10px;
+    border-radius: 8px;
 }
 
 .imgContainer{
     position: relative;
     
 }
+.offerButton{
+    padding: 10px 45px ;
+    background: #FF4F17;
+    border-radius: 4px; 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    justify-self: flex-end
+}
+.cardInformationContainer{
+    padding: 20px;
+}
+.groupMembersContainer{
+    display: flex;
+    justify-content: space-between;
+}
+@media all and (max-width: 600px){
+    .card{
+        width: 100%;
+        height: 430px;
+        border-radius: 6px;
+        padding: 20px;
+    }
+    .cardExtended{
+        width: 100%;
+        height: 430px;
+        border-radius: 6px;
+        padding: 20px;
+    }
+    
+ }

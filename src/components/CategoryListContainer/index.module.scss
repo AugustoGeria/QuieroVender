@@ -1,0 +1,18 @@
+.title{
+    margin-left: 75px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    line-height: 39px;
+}
+body{
+    background-color: #E5E5E5;
+}
+@media all and (max-width: 600px){
+    .title{
+        margin-left: 12px;
+        
+    }
+ }

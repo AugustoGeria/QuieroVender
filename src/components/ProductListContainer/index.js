@@ -7,7 +7,6 @@ import useProductList from '../../hooks/useProductList'
 import classes from './styles.module.scss'
 function ProductListContainer ({ productsIds, featureProductId }) {
   const productList = useProductList()
-  console.log(classes)
   return (
     <div className={classes.cardContainer}>
       {productList.map(

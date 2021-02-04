@@ -1,9 +1,23 @@
-a{
+.navbarLink{
    margin: 10px;
    margin-right: 100px;
    text-decoration: none;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   color: #1A2224;
+   & > img{
+       width: 22px;
+       height: 22px;
+   }
 }
 
-a:hover{
+.navbarLink:hover{
     text-decoration: underline;
 }
+
+@media all and (max-width: 600px){
+    .navbarLink{
+        display: none;
+    }
+ }

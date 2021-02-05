@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from '../../components/Banner'
 
 import CategoryListContainer from '../../components/CategoryListContainer/index'
 import Navbar from '../../components/Navbar'
@@ -9,7 +10,7 @@ function HomePage () {
   return (
     <>
       <Navbar />
-      <img src='https://placehold.co/1400x400' alt='banner' />
+      <Banner />
       <CategoryListContainer />
     </>
   )

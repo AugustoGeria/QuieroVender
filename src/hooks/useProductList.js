@@ -1,6 +1,6 @@
-import muffin from "../images/muffin.svg"
-import strawberries from "../images/strawberries.svg"
-import cookies from "../images/cookies.svg"
+import muffin from '../images/muffin.svg'
+import strawberries from '../images/strawberries.svg'
+import cookies from '../images/cookies.svg'
 
 const useProductList = () => [
   {
@@ -45,7 +45,7 @@ const useProductList = () => [
     occupancyPercentage: '50%',
     productPhotoURL: cookies
   }
-  
+
 ]
 
 export default useProductList

@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import CountdownTimer from '../CountdownTimer'
 import duration from 'dayjs/plugin/duration'
 
-function CountdownTimerContainer ({ extended,expirationDate }) {
+function CountdownTimerContainer ({ extended, expirationDate }) {
   const [timeLeft, setTimeLeft] = useState()
-  dayjs.extend(duration)  
-  
+  dayjs.extend(duration)
+
   const calculateTimeLeft = useCallback((expirationDate) => {
     const now = dayjs()
     expirationDate = dayjs(expirationDate)

@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
-import classnames from "classnames"
+import React from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
-import GroupOccupancy from "../GroupOccupancy"
-import CountdownTimerContainer from "../CountdownTimerContainer"
+import GroupOccupancy from '../GroupOccupancy'
+import CountdownTimerContainer from '../CountdownTimerContainer'
 
-import classes from "./index.module.scss"
+import classes from './index.module.scss'
 
-function ProductCard({
+function ProductCard ({
   title,
   listPrice,
   discountedPrice,
@@ -22,17 +22,26 @@ function ProductCard({
   extended
 }) {
   return (
-    <div className={classnames({
-      [classes.cardExtended]: extended,
-      [classes.card]: !extended
-     })}>
+    <div
+      className={classnames({
+        [classes.cardExtended]: extended,
+        [classes.card]: !extended
+      })}
+    >
       <div className={classes.imgContainer}>
-      <CountdownTimerContainer extended={extended}  expirationDate={expirationDate} />
+        <CountdownTimerContainer
+          extended={extended}
+          expirationDate={expirationDate}
+        />
         <img src={productPhotoURL} alt={title} className={classes.imgCard} />
-        <span className={classnames({
-        [classes.discountExtended]: extended,
-        [classes.discount]: !extended
-        })}>{discountedPercentage}</span>
+        <span
+          className={classnames({
+            [classes.discountExtended]: extended,
+            [classes.discount]: !extended
+          })}
+        >
+          {discountedPercentage}
+        </span>
       </div>
       <div className={classes.cardInformationContainer}>
         <div className={classes.prices}>
@@ -41,14 +50,16 @@ function ProductCard({
         </div>
         <p className={classes.productDescription}>{description}</p>
         <p className={classes.colorOptions}>{colors}</p>
-          <div className={classes.groupMembersContainer}>
+        <div className={classes.groupMembersContainer}>
           <GroupOccupancy
             groupCapacity={groupCapacity}
             suscriptorsNumber={suscriptorsNumber}
             occupancyPercentage={occupancyPercentage}
           />
-          {extended && <button className={classes.offerButton}>Ver Oferta</button>}
-          </div>
+          {extended && (
+            <button className={classes.offerButton}>Ver Oferta</button>
+          )}
+        </div>
       </div>
     </div>
   )

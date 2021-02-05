@@ -1,4 +1,4 @@
-.title{
+.title {
     margin-left: 75px;
     font-style: normal;
     font-weight: normal;
@@ -7,12 +7,13 @@
     margin-top: 15px;
     line-height: 39px;
 }
-body{
+
+body {
     background-color: #E5E5E5;
 }
-@media all and (max-width: 600px){
+
+@media all and (max-width: 600px) {
     .title{
-        margin-left: 12px;
-        
+        margin-left: 12px;    
     }
  }

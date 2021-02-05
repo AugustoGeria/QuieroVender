@@ -6,7 +6,7 @@ function NavbarLink ({ text, iconSource }) {
   return (
     <a className={classes.navbarLink} href='#'>
       {text}
-      {iconSource && <img src={iconSource} alt=""></img>}
+      {iconSource && <img src={iconSource} alt='' />}
     </a>
   )
 }

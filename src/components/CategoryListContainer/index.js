@@ -15,7 +15,10 @@ function CategoryListContainer () {
 
         return (
           <div>
-            <h1 className={classes.title}>{categoryTitle}</h1>
+            <div className={classes.titleContainer}>
+              <h1>{categoryTitle}</h1>
+              <a>Ver todos</a>
+            </div>
             <ProductListContainer
               key={categoryTitle}
               productsIds={productsIds}

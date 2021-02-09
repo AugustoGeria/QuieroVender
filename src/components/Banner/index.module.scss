@@ -1,7 +1,13 @@
+@import '../../styles/media-queries.scss';
+
 .bannerContainer {
     background-color: #FFFFFF;
     position: relative;
     padding-top: 50px;
+
+    @include for-phone-only{
+        display: none;
+    }
 }
 
 .boyAndGirlImg{
@@ -38,25 +44,25 @@
     }
 }
 
-.informativeImage{
-    height: 68px;
-    width: 60px;
-    margin-right: 20px;
-}
-
-.informativeText{
-    font-size: 18px;
-    color: #5C6163;
-}
-
-.imgTextContainer{
-    display: flex;
-    margin-left: 50px;
-}
-
 .informativeImagesContainer{
     display: flex;
     position: absolute;
     bottom: 50px;
     z-index: 2;
+
+    & > div {
+        display: flex;
+        margin-left: 50px;
+
+        & > img {
+            height: 68px;
+            width: 60px;
+            margin-right: 20px;
+        }
+
+        & > span {
+            font-size: 18px;
+            color: #5C6163;
+       }
+    }     
 }

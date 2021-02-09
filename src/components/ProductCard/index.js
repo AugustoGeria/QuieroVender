@@ -19,13 +19,15 @@ function ProductCard ({
   groupCapacity,
   suscriptorsNumber,
   occupancyPercentage,
-  extended
+  extended,
+  hide
 }) {
   return (
     <div
       className={classnames({
         [classes.cardExtended]: extended,
-        [classes.card]: !extended
+        [classes.card]: !extended,
+        [classes.hide]: hide
       })}
     >
       <div className={classes.imgContainer}>

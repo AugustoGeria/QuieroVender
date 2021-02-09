@@ -1,14 +1,30 @@
-.title {
-    margin-left: 75px;
-    font-size: 30px;
-    margin-bottom: 40px;
-    margin-top: 15px;
-    line-height: 39px;
-}
+@import '../../styles/media-queries.scss';
 
+.titleContainer{
+    display: flex;
+    justify-content: space-between;
 
-@media all and (max-width: 600px) {
-    .title{
-        margin-left: 12px;    
+    & > h1 {
+        margin-left: 75px;
+        font-size: 30px;
+        margin-bottom: 40px;
+        margin-top: 15px;
+        line-height: 39px;
+
+        @include for-phone-only {
+            margin-left: 12px;
+        }
     }
- }
+
+    & > a {
+        display: none;
+
+        @include for-phone-only {
+            display: inline;
+            margin-top: 27px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #3561D1;
+        }
+    }
+}

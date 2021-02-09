@@ -5,35 +5,28 @@
 
 .prices {
     display: flex;
-}
 
-.regularPrice {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #A0ACAF;
-    text-decoration: line-through;
-}
+    & > span:nth-child(1) {
+        font-size: 16px;
+        color: #A0ACAF;
+        text-decoration: line-through;
+    }
 
-.specialPrice {
-    margin-left: 12px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    color: #1A2224;
+    & > span:nth-child(2) {
+        margin-left: 12px;
+        font-weight: bold;
+        font-size: 26px;
+        color: #1A2224;
+    }
 }
 
 .productDescription {
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     color: #1A2224;
     margin: 10px 10px 10px 0;
 }
 
 .colorOptions {
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     color: #A0ACAF;
 }
@@ -72,6 +65,7 @@
     left: 200px;
     text-align: center;
     border-radius: 8px;
+    display: flex;
 }
 
 .discountExtended {
@@ -84,22 +78,25 @@
     right: 520px;
     text-align: center;
     border-radius: 8px;
+    display: flex;
 }
 
 .imgContainer {
-    position: relative;
-    
+    position: relative;  
 }
 
 .offerButton {
     padding: 10px 45px ;
     background: #FF4F17;
     border-radius: 4px; 
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     color: #FFFFFF;
-    justify-self: flex-end
+    justify-self: flex-end;
+    height: 45px;
+    margin: auto 0;
+    border: 0;
+    line-height: 21px;
 }
 
 .cardInformationContainer  {

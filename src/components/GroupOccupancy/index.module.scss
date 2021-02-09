@@ -10,8 +10,6 @@
 }
 
 .participantsNumber {
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     color: #7F7F9C;
     margin-left: 8px;
@@ -29,7 +27,7 @@
     }
     
     & > * + * {
-                 margin-right: 8px;
+        margin-right: 8px;
      } 
 }
 

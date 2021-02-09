@@ -45,8 +45,8 @@ function ProductCard ({
       </div>
       <div className={classes.cardInformationContainer}>
         <div className={classes.prices}>
-          <span className={classes.regularPrice}>{listPrice}</span>
-          <span className={classes.specialPrice}>{discountedPrice}</span>
+          <span>{listPrice}</span>
+          <span>{discountedPrice}</span>
         </div>
         <p className={classes.productDescription}>{description}</p>
         <p className={classes.colorOptions}>{colors}</p>
@@ -57,7 +57,7 @@ function ProductCard ({
             occupancyPercentage={occupancyPercentage}
           />
           {extended && (
-            <button className={classes.offerButton}>Ver Oferta</button>
+            <button className={classes.offerButton}>Ver oferta</button>
           )}
         </div>
       </div>

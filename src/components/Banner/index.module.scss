@@ -9,27 +9,13 @@
     position: absolute;
     transform: matrix(0.99, 0.11, -0.11, 0.99, 0, 0);
     bottom: 50px;
-    left: 200px;
+    left: 800px;
+    width: 240px;
 }
 
 .grayWaveImg{
     z-index: 1;
     position: relative;
-}
-
-.bannerTitle {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 45px;
-    line-height: 59px;
-    color: #3561D1;
-}
-
-.bannerSubtitle{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 31px;
 }
 
 .titleContainer{
@@ -39,6 +25,17 @@
     left: 60px;
     z-index: 2;
     top: 25px;
+   
+    & > span:nth-child(1){
+        font-size: 45px;
+        line-height: 59px;
+        color: #3561D1;
+    }
+
+    & > span:nth-child(2){
+        font-size: 24px;
+        line-height: 31px;
+    }
 }
 
 .informativeImage{
@@ -48,8 +45,6 @@
 }
 
 .informativeText{
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     color: #5C6163;
 }

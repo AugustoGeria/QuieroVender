@@ -13,11 +13,11 @@ function Banner () {
   return (
     <div className={classes.bannerContainer}>
       <div className={classes.titleContainer}>
-        <span className={classes.bannerTitle}>¡Hay equipo!</span>
-        <span className={classes.bannerSubtitle}>¿Cómo funciona?</span>
+        <span>¡Hay equipo!</span>
+        <span>¿Cómo funciona?</span>
       </div>
       <img src={boyAndGirl} className={classes.boyAndGirlImg} />
-      <img src={grayWave} alt='grayWave' className={classes.grayWaveImg} />
+      <img src={grayWave} alt='' className={classes.grayWaveImg} />
       <div className={classes.informativeImagesContainer}>
         <div className={classes.imgTextContainer}>
           <img src={arrowTarget} className={classes.informativeImage} />

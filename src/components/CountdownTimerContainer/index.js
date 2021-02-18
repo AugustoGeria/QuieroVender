@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import CountdownTimer from '../CountdownTimer'
 import duration from 'dayjs/plugin/duration'
 
-function CountdownTimerContainer ({ expirationDate }) {
+function CountdownTimerContainer ({ extended, expirationDate }) {
   const [timeLeft, setTimeLeft] = useState()
-  dayjs.extend(duration)  
+  dayjs.extend(duration)
 
   const calculateTimeLeft = useCallback((expirationDate) => {
     const now = dayjs()
@@ -32,7 +32,7 @@ function CountdownTimerContainer ({ expirationDate }) {
     return () => clearInterval(intervalID)
   }, [expirationDate, calculateTimeLeft])
 
-  return <CountdownTimer timeLeft={timeLeft} />
+  return <CountdownTimer timeLeft={timeLeft} extended={extended} />
 }
 
 CountdownTimerContainer.propTypes = {

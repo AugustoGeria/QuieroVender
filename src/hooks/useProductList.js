@@ -1,3 +1,8 @@
+import muffin from '../images/muffin.svg'
+import strawberries from '../images/strawberries.svg'
+import cookies from '../images/cookies.svg'
+import headphones from '../images/headphones.svg'
+
 const useProductList = () => [
   {
     id: '1',
@@ -9,9 +14,9 @@ const useProductList = () => [
     description: 'aquí va una descripción',
     groupCapacity: '10',
     suscriptorsNumber: '5',
-    discountedPercentage: '15%',
+    discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '50%',
-    productPhotoURL: 'https://placehold.co/600x400'
+    productPhotoURL: strawberries
   },
   {
     id: '5',
@@ -23,10 +28,39 @@ const useProductList = () => [
     description: 'aquí va una descripción',
     groupCapacity: '10',
     suscriptorsNumber: '8',
-    discountedPercentage: '15%',
+    discountedPercentage: 'Hasta 15%',
     occupancyPercentage: '80%',
-    productPhotoURL: 'https://placehold.co/600x400'
+    productPhotoURL: muffin
+  },
+  {
+    id: '2',
+    title: 'Drone',
+    listPrice: 'U$$ 150.0',
+    discountedPrice: 'U$$ 130.0',
+    colors: 'Rojo , Negro , Gris',
+    expirationDate: new Date('22 January 2021 21:08 UTC').toISOString(),
+    description: 'aquí va una descripción',
+    groupCapacity: '10',
+    suscriptorsNumber: '5',
+    discountedPercentage: 'Hasta 15%',
+    occupancyPercentage: '50%',
+    productPhotoURL: cookies
+  },
+  {
+    id: '22',
+    title: 'Drone',
+    listPrice: 'U$$ 150.0',
+    discountedPrice: 'U$$ 130.0',
+    colors: 'Rojo , Negro , Gris',
+    expirationDate: new Date('22 January 2021 21:08 UTC').toISOString(),
+    description: 'aquí va una descripción',
+    groupCapacity: '10',
+    suscriptorsNumber: '5',
+    discountedPercentage: 'Hasta 15%',
+    occupancyPercentage: '50%',
+    productPhotoURL: headphones
   }
+
 ]
 
 export default useProductList

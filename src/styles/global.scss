@@ -1,0 +1,19 @@
+@import "./DMSans.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: DMSans;
+  background-color: #f7f8fa;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

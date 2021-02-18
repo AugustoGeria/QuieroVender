@@ -1,12 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function NavbarLink ({ text }) {
-  return <a href='#'>{text}</a>
+import classes from './index.module.scss'
+
+function NavbarLink ({ text, iconSource }) {
+  return (
+    <a className={classes.navbarLink} href='#'>
+      {text}
+      {iconSource && <img src={iconSource} alt='' />}
+    </a>
+  )
 }
 
 NavbarLink.prototype = {
-  text: PropTypes.string
+  text: PropTypes.string,
+  iconSource: PropTypes.string
 }
 
 export default NavbarLink

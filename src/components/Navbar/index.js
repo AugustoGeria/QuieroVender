@@ -1,13 +1,16 @@
 import React from 'react'
 
 import NavbarLink from '../NavbarLink'
+import cart from '../../images/shopping-cart.svg'
+
+import classes from './index.module.scss'
 
 function Navbar () {
   return (
-    <div>
-      <NavbarLink text='hola' />
-      <NavbarLink text='carrito' />
-      <NavbarLink text='otro' />
+    <div className={classes.links}>
+      <NavbarLink text='Creá tu cuenta' />
+      <NavbarLink text='Ingresá' />
+      <NavbarLink iconSource={cart} />
     </div>
   )
 }

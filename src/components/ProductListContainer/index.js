@@ -4,10 +4,12 @@ import PropTypes from 'prop-types'
 import ProductCard from './../ProductCard/index'
 import useProductList from '../../hooks/useProductList'
 
+import classes from './styles.module.scss'
 function ProductListContainer ({ productsIds, featureProductId }) {
   const productList = useProductList()
+  let render = false
   return (
-    <div>
+    <div className={classes.cardContainer}>
       {productList.map(
         ({
           id,
@@ -22,7 +24,8 @@ function ProductListContainer ({ productsIds, featureProductId }) {
           discountedPercentage,
           occupancyPercentage,
           productPhotoURL
-        }) => {
+        }, index) => {
+          if (id === featureProductId) render = true
           return (
             <ProductCard
               key={id}
@@ -38,6 +41,7 @@ function ProductListContainer ({ productsIds, featureProductId }) {
               suscriptorsNumber={suscriptorsNumber}
               occupancyPercentage={occupancyPercentage}
               extended={id === featureProductId}
+              hide={render && index === 3}
             />
           )
         }

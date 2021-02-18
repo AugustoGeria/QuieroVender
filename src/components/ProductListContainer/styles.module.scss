@@ -1,16 +1,15 @@
-@import '../../styles/media-queries.scss';
+@import "../../styles/media-queries.scss";
 
+.cardContainer {
+  display: flex;
+  margin-bottom: 100px;
+  margin-left: 75px;
+  flex-shrink: 0;
 
-.cardContainer { 
+  @include for-phone-only {
     display: flex;
-    margin-bottom: 100px;
-    margin-left: 75px;
-    flex-shrink: 0;
-
-    @include for-phone-only{
-        display: flex;
-        overflow-x: auto;
-        margin-bottom: 0;
-        margin-left: 0;
-    }
+    overflow-x: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
 }

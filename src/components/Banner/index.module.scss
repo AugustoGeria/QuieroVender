@@ -1,68 +1,68 @@
-@import '../../styles/media-queries.scss';
+@import "../../styles/media-queries.scss";
 
 .bannerContainer {
-    background-color: #FFFFFF;
-    position: relative;
-    padding-top: 50px;
+  background-color: #ffffff;
+  position: relative;
+  padding-top: 50px;
 
-    @include for-phone-only{
-        display: none;
-    }
+  @include for-phone-only {
+    display: none;
+  }
 }
 
-.boyAndGirlImg{
-    height: 290px;
-    position: absolute;
-    transform: matrix(0.99, 0.11, -0.11, 0.99, 0, 0);
-    bottom: 50px;
-    left: 800px;
-    width: 240px;
+.boyAndGirlImg {
+  height: 290px;
+  position: absolute;
+  transform: matrix(0.99, 0.11, -0.11, 0.99, 0, 0);
+  bottom: 50px;
+  left: 60%;
+  width: 240px;
 }
 
-.grayWaveImg{
-    z-index: 1;
-    position: relative;
+.grayWaveImg {
+  z-index: 1;
+  position: relative;
 }
 
-.titleContainer{
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 60px;
+  z-index: 2;
+  top: 25px;
+
+  & > span:nth-child(1) {
+    font-size: 45px;
+    line-height: 59px;
+    color: #3561d1;
+  }
+
+  & > span:nth-child(2) {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.informativeImagesContainer {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  z-index: 2;
+
+  & > div {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 60px;
-    z-index: 2;
-    top: 25px;
-   
-    & > span:nth-child(1){
-        font-size: 45px;
-        line-height: 59px;
-        color: #3561D1;
+    margin-left: 50px;
+
+    & > img {
+      height: 68px;
+      width: 60px;
+      margin-right: 20px;
     }
 
-    & > span:nth-child(2){
-        font-size: 24px;
-        line-height: 31px;
+    & > span {
+      font-size: 18px;
+      color: #5c6163;
     }
-}
-
-.informativeImagesContainer{
-    display: flex;
-    position: absolute;
-    bottom: 50px;
-    z-index: 2;
-
-    & > div {
-        display: flex;
-        margin-left: 50px;
-
-        & > img {
-            height: 68px;
-            width: 60px;
-            margin-right: 20px;
-        }
-
-        & > span {
-            font-size: 18px;
-            color: #5C6163;
-       }
-    }     
+  }
 }

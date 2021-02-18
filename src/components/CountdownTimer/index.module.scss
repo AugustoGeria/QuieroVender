@@ -1,32 +1,32 @@
-@import '../../styles/media-queries.scss';
+@import "../../styles/media-queries.scss";
 
 .timerView {
-   position: absolute;
-   bottom: 173px;
-   left: 200px;
-   background: #0A334F;
-   border-radius: 15px;
-   padding: 5px;
-   color: #FDCA40;
+  position: absolute;
+  bottom: 173px;
+  right: 20px;
+  background: #0a334f;
+  border-radius: 15px;
+  padding: 5px;
+  color: #fdca40;
 
-   @include for-phone-only {
-        bottom: 170px;
-        left: 130px;
-    }
+  @include for-phone-only {
+    bottom: 170px;
+    right: 13px;
+  }
 }
 
 .timerViewExtended {
-    position: absolute;
-    bottom: 173px;
-    left: 470px;
-    padding: 5px;
-    color: #FDCA40;
-    background: rgba(26, 34, 36, 0.8);
-    box-shadow: 0px 4px 4px rgba(26, 34, 36, 0.1);
-    border-radius: 20px;
+  position: absolute;
+  bottom: 173px;
+  left: 470px;
+  padding: 5px;
+  color: #fdca40;
+  background: rgba(26, 34, 36, 0.8);
+  box-shadow: 0px 4px 4px rgba(26, 34, 36, 0.1);
+  border-radius: 20px;
 
-    @include for-phone-only {
-        top: 10;
-        left: 10px;
-    }
+  @include for-phone-only {
+    top: 10px;
+    left: 10px;
+  }
 }
